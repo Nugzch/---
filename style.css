@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #87CEEB, #4CAF50);
+    overflow: hidden;
+}
+
+.scene {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.car {
+    position: absolute;
+    bottom: 100px;
+    left: 0;
+    width: 200px;
+    height: 100px;
+    display: flex;
+    align-items: flex-end;
+    animation: drive 5s linear forwards;
+}
+
+.body {
+    width: 200px;
+    height: 60px;
+    background: red;
+    border-radius: 10px;
+    position: relative;
+    top: -20px;
+}
+
+.wheel {
+    width: 40px;
+    height: 40px;
+    background: black;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+}
+
+.wheel.front {
+    right: 10px;
+}
+
+.wheel.back {
+    left: 10px;
+}
+
+@keyframes drive {
+    from {
+        left: 0;
+    }
+    to {
+        left: calc(100% - 250px);
+    }
+}
